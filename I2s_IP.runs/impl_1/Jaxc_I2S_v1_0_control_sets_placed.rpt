@@ -1,0 +1,64 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (lin64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Thu Oct  8 16:03:20 2015
+| Host         : Lappytoppy running 64-bit Linux Mint 17.2 Rafaela
+| Command      : report_control_sets -verbose -file Jaxc_I2S_v1_0_control_sets_placed.rpt
+| Design       : Jaxc_I2S_v1_0
+| Device       : xc7z010
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    11 |
+| Minimum Number of register sites lost to control set restrictions |    25 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              70 |           17 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              24 |            7 |
+| Yes          | No                    | No                     |               8 |            1 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             145 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+---------------------------------------------------------+-------------------------------------------+------------------+----------------+
+|      Clock Signal     |                      Enable Signal                      |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
++-----------------------+---------------------------------------------------------+-------------------------------------------+------------------+----------------+
+|  s_axi_aclk_IBUF_BUFG |                                                         |                                           |                3 |              3 |
+|  s_axi_aclk_IBUF_BUFG | s_axi_aresetn_IBUF                                      |                                           |                1 |              8 |
+|  s_axi_aclk_IBUF_BUFG | Jaxc_I2S_v1_0_S_AXI_inst/axi_awready0                   | Jaxc_I2S_v1_0_S_AXI_inst/I2S/SR[0]        |                2 |              8 |
+|  s_axi_aclk_IBUF_BUFG |                                                         | Jaxc_I2S_v1_0_S_AXI_inst/cnt_r[8]_i_1_n_0 |                3 |              9 |
+|  s_axi_aclk_IBUF_BUFG | Jaxc_I2S_v1_0_S_AXI_inst/cnt_l0                         | Jaxc_I2S_v1_0_S_AXI_inst/cnt_l[8]_i_1_n_0 |                2 |              9 |
+|  s_axi_aclk_IBUF_BUFG |                                                         | Jaxc_I2S_v1_0_S_AXI_inst/I2S/SR[0]        |                4 |             15 |
+| ~BCLK_IBUF_BUFG       | Jaxc_I2S_v1_0_S_AXI_inst/I2S/crnt[sample][31]_i_2_n_0   | Jaxc_I2S_v1_0_S_AXI_inst/I2S/SR[0]        |               12 |             32 |
+|  s_axi_aclk_IBUF_BUFG | Jaxc_I2S_v1_0_S_AXI_inst/read_channel                   | Jaxc_I2S_v1_0_S_AXI_inst/I2S/SR[0]        |                6 |             32 |
+|  s_axi_aclk_IBUF_BUFG | Jaxc_I2S_v1_0_S_AXI_inst/slv_reg_wren                   | Jaxc_I2S_v1_0_S_AXI_inst/I2S/SR[0]        |                6 |             32 |
+|  s_axi_aclk_IBUF_BUFG | Jaxc_I2S_v1_0_S_AXI_inst/Sample_in_left_buf[31]_i_1_n_0 | Jaxc_I2S_v1_0_S_AXI_inst/I2S/SR[0]        |                7 |             32 |
+| ~BCLK_IBUF_BUFG       |                                                         |                                           |               14 |             67 |
++-----------------------+---------------------------------------------------------+-------------------------------------------+------------------+----------------+
+
+
